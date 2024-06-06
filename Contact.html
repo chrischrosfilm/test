@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>  Contact Us Form  | CodingLab </title>
+    <link rel="shortcut icon" href="./assets/images/CCF Logo (1).png" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <script src="./assets/js/validation.js"></script>
+
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+
+
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Chris Chros Films</div>
+          <div class="text-two">102, Juhu Grotto Apartments,</div>
+          <div class="text-two">Off Juhu Tara Road,</div>
+          <div class="text-two">Nr. SNDT College,</div>
+          <div class="text-two">Santacruz West,</div>
+          <div class="text-two">Mumbai 400049</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+0098 9893 5647</div>
+          <div class="text-two">+0096 3434 5678</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">vijaypereira@chrischrosfilms.com
+
+            ​</div>
+          
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+       
+        <script src="https://sheetdb.io/s/f/2bek0zkr8xnj4.js"></script>
+    </div>
+    </div>
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js" style="
+  width: 673px;
+  height: 758px;"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxjgjfgjJYq9tSv_pThbzb8bgBal6JJ11DVyMNqqReDigpuz6sMGx_p-GUMtiWmOg_NPQ/exec'
+    const form = document.forms['contact']
+       
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</html>
